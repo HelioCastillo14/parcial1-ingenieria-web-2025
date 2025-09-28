@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con TechSolutions Panama - Formulario de contacto, ubicación y información">
+    <meta name="keywords" content="contacto, formulario, ubicación, Panamá, desarrollo web">
+    <title>Contacto - TechSolutions Panama</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="img/logo.png" alt="TechSolutions Panama Logo" class="logo">
+                <div class="company-info">
+                    <h1>TechSolutions Panama</h1>
+                    <p class="slogan">Innovación tecnológica a tu alcance</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca-de.html">Acerca De</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte a transformar tus ideas en soluciones tecnológicas innovadoras. ¡Conversemos sobre tu próximo proyecto!</p>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <div class="content-area">
+                <article class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>📍 Oficina Principal - Ciudad de Panamá</h4>
+                            <p><strong>Dirección:</strong> Torre Global Bank, Piso 25, Oficina 2501<br>
+                            Calle 50, Bella Vista, Ciudad de Panamá</p>
+                            <p><strong>Teléfono:</strong> +507 6789-0123</p>
+                            <p><strong>Email:</strong> panama@techsolutions.pa</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>📍 Oficina Costa Rica</h4>
+                            <p><strong>Dirección:</strong> Edificio Centro Colón, Piso 8<br>
+                            Paseo Colón, San José, Costa Rica</p>
+                            <p><strong>Teléfono:</strong> +506 2234-5678</p>
+                            <p><strong>Email:</strong> costarica@techsolutions.pa</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h4>📍 Oficina Nicaragua</h4>
+                            <p><strong>Dirección:</strong> Plaza Inter, Torre Norte, Piso 12<br>
+                            Managua, Nicaragua</p>
+                            <p><strong>Teléfono:</strong> +505 2567-8901</p>
+                            <p><strong>Email:</strong> nicaragua@techsolutions.pa</p>
+                        </div>
+                    </div>
+
+                    <div class="hours-section">
+                        <h4>⏰ Horarios de Atención</h4>
+                        <div class="hours-grid">
+                            <div class="hours-item">
+                                <strong>Lunes a Viernes:</strong><br>
+                                8:00 AM - 6:00 PM
+                            </div>
+                            <div class="hours-item">
+                                <strong>Sábados:</strong><br>
+                                9:00 AM - 2:00 PM
+                            </div>
+                            <div class="hours-item">
+                                <strong>Domingos:</strong><br>
+                                Cerrado
+                            </div>
+                            <div class="hours-item">
+                                <strong>Soporte 24/7:</strong><br>
+                                Disponible para clientes premium
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-section">
+                        <h4>📍 Ubicación - Oficina Principal</h4>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.6273737774845!2d-79.53373268470424!3d8.993217391298982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8f1b9f34b87%3A0x4b9c0b9d9b9c0b9d!2sCalle%2050%2C%20Panamá!5e0!3m2!1ses!2spa!4v1695123456789!5m2!1ses!2spa" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación TechSolutions Panama">
+                            </iframe>
+                        </div>
+                        <p class="map-description">Nuestra oficina principal está ubicada en el corazón del distrito financiero de la Ciudad de Panamá, con fácil acceso al transporte público y estacionamiento disponible.</p>
+                    </div>
+                </article>
+
+                <div class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                    
+                    <form id="contactForm" method="POST" action="procesar_contacto.php" novalidate>
+                        <div class="form-row">
+                            <div class="form-group required">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <div class="error-message" id="error-nombre"></div>
+                            </div>
+                            
+                            <div class="form-group required">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message" id="error-email"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group required">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+507 0000-0000" required>
+                                <div class="error-message" id="error-telefono"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="empresa">Empresa/Organización</label>
+                                <input type="text" id="empresa" name="empresa">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group required">
+                                <label for="servicio">Servicio de Interés</label>
+                                <select id="servicio" name="servicio" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="aplicaciones-moviles">Aplicaciones Móviles</option>
+                                    <option value="consultoria-it">Consultoría IT</option>
+                                    <option value="mantenimiento">Mantenimiento y Soporte</option>
+                                    <option value="e-commerce">E-commerce</option>
+                                    <option value="sistemas-empresariales">Sistemas Empresariales</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div class="error-message" id="error-servicio"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="presupuesto">Presupuesto Estimado (USD)</label>
+                                <select id="presupuesto" name="presupuesto">
+                                    <option value="">Selecciona un rango</option>
+                                    <option value="menor-5000">Menos de $5,000</option>
+                                    <option value="5000-15000">$5,000 - $15,000</option>
+                                    <option value="15000-50000">$15,000 - $50,000</option>
+                                    <option value="50000-100000">$50,000 - $100,000</option>
+                                    <option value="mayor-100000">Más de $100,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha_inicio">Fecha Deseada de Inicio</label>
+                            <input type="date" id="fecha_inicio" name="fecha_inicio" min="2024-09-29">
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe tu proyecto, necesidades específicas, objetivos y cualquier información adicional que consideres relevante..." required></textarea>
+                            <div class="error-message" id="error-mensaje"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="si">
+                                <span class="checkmark"></span>
+                                Quiero recibir noticias y actualizaciones sobre nuevos servicios y tecnologías
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label required">
+                                <input type="checkbox" id="politicas" name="politicas" required>
+                                <span class="checkmark"></span>
+                                Acepto los <a href="#politicas" target="_blank">términos y condiciones</a> y la <a href="#privacidad" target="_blank">política de privacidad</a>
+                            </label>
+                            <div class="error-message" id="error-politicas"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="btn-loading" style="display: none;">Enviando...</span>
+                        </button>
+                    </form>
+
+                    <div id="form-success" class="success-message" style="display: none;">
+                        <h4>¡Mensaje Enviado Exitosamente!</h4>
+                        <p>Gracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo en las próximas 24 horas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Tips para Contactarnos</h3>
+                    <ul class="tips-list">
+                        <li>
+                            <strong>💡 Sé específico:</strong><br>
+                            Mientras más detalles nos proporciones sobre tu proyecto, mejor podremos ayudarte.
+                        </li>
+                        <li>
+                            <strong>📋 Prepara información:</strong><br>
+                            Ten lista información sobre tu empresa, objetivos y timeline esperado.
+                        </li>
+                        <li>
+                            <strong>🎯 Define objetivos:</strong><br>
+                            Explícanos qué problemas quieres resolver o qué objetivos deseas alcanzar.
+                        </li>
+                        <li>
+                            <strong>💰 Menciona presupuesto:</strong><br>
+                            Un rango de presupuesto nos ayuda a crear propuestas más precisas.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>FAQ - Preguntas Frecuentes</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h4>¿Cuánto tiempo toma desarrollar un sitio web?</h4>
+                            <p>Dependiendo de la complejidad, entre 4-12 semanas para proyectos estándar.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>¿Ofrecen soporte post-lanzamiento?</h4>
+                            <p>Sí, ofrecemos diferentes planes de soporte y mantenimiento continuo.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>¿Trabajan con empresas internacionales?</h4>
+                            <p>Absolutamente. Tenemos clientes en toda Centroamérica y Estados Unidos.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>¿Qué tecnologías utilizan?</h4>
+                            <p>React, Node.js, Python, .NET, AWS, Azure y las últimas tecnologías del mercado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Enlaces Útiles</h3>
+                    <ul class="useful-links">
+                        <li><a href="#cotizacion">Solicitar Cotización Express</a></li>
+                        <li><a href="#portfolio">Ver Portafolio Completo</a></li>
+                        <li><a href="#testimonios">Testimonios de Clientes</a></li>
+                        <li><a href="#metodologia">Nuestra Metodología</a></li>
+                        <li><a href="#soporte">Centro de Soporte</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Contacto Directo</h3>
+                    <div class="direct-contact">
+                        <div class="contact-method">
+                            <h4>📞 Llamada Directa</h4>
+                            <p><strong>+507 6789-0123</strong></p>
+                            <small>Lun-Vie 8:00 AM - 6:00 PM</small>
+                        </div>
+                        <div class="contact-method">
+                            <h4>💬 WhatsApp Business</h4>
+                            <p><strong>+507 6789-0124</strong></p>
+                            <small>Respuesta en menos de 2 horas</small>
+                        </div>
+                        <div class="contact-method">
+                            <h4>📧 Email Directo</h4>
+                            <p><strong>info@techsolutions.pa</strong></p>
+                            <small>Respuesta en 24 horas</small>
+                        </div>
+                        <div class="contact-method">
+                            <h4>🚨 Emergencias</h4>
+                            <p><strong>+507 6789-0125</strong></p>
+                            <small>Solo para clientes premium 24/7</small>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechSolutions Panama</h4>
+                    <p>Innovando el futuro tecnológico de Panamá desde 2018. Comprometidos con la excelencia y la satisfacción del cliente.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="acerca-de.html">Acerca De</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#politicas">Políticas de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos Externos</h4>
+                    <ul>
+                        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub - Repositorios</a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener">Stack Overflow</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/techsolutionspanama" target="_blank" rel="noopener">Facebook</a>
+                        <a href="https://instagram.com/techsolutionspty" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://linkedin.com/company/techsolutions-panama" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSolutions Panama. Todos los derechos reservados. | Diseñado con HTML5 y CSS3</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+</body>
+</html>
