@@ -1,15 +1,14 @@
 <?php
-// Configuración de la base de datos
+// Datos de conexión
 $servidor = "localhost";
 $usuario = "root";
-$password = "";  
+$password = "";
 $base_datos = "parcial1_ingenieria_web";
 
+// Conectar a MySQL
 try {
-    // Crear conexión PDO
-    $pdo = new PDO("mysql:host=$servidor;dbname=$base_datos;charset=utf8", $usuario, $password);
-    // Configurar PDO para mostrar errores
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("mysql:host=$servidor;dbname=$base_datos", $usuario, $password);
+    // echo "Conexión exitosa"; // Descomentar para probar
 } catch(PDOException $e) {
     die("Error de conexión: " . $e->getMessage());
 }
