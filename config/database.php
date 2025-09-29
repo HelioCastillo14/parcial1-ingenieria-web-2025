@@ -1,14 +1,13 @@
 <?php
-// Datos de conexión
-$servidor = "localhost";
-$usuario = "root";
-$password = "";
-$base_datos = "parcial1_ingenieria_web";
+// Configuración para InfinityFree
+$servidor = "sql212.infinityfree.com";
+$usuario = "if0_40047424_[tu-usuario]";  // Reemplazar con tu usuario real
+$password = "3EPLLO9Yy0";             // Reemplazar con tu password real
+$base_datos = "if0_40047424_parcial_web"; // Reemplazar con nombre real de BD
 
-// Conectar a MySQL
 try {
-    $pdo = new PDO("mysql:host=$servidor;dbname=$base_datos", $usuario, $password);
-    // echo "Conexión exitosa"; // Descomentar para probar
+    $pdo = new PDO("mysql:host=$servidor;dbname=$base_datos;charset=utf8", $usuario, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e) {
     die("Error de conexión: " . $e->getMessage());
 }
