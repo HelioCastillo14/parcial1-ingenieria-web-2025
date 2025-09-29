@@ -1,5 +1,5 @@
 <?php
-// Configuración para InfinityFree - CORREGIDA
+// Configuración de el hosting
 $servidor = "sql212.infinityfree.com";
 $usuario = "if0_40047424";                    
 $password = "3EPLL09Yy0";                     
