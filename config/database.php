@@ -1,9 +1,9 @@
 <?php
 // Configuración para InfinityFree
 $servidor = "sql212.infinityfree.com";
-$usuario = "if0_40047424_[tu-usuario]";  // Reemplazar con tu usuario real
-$password = "3EPLLO9Yy0";             // Reemplazar con tu password real
-$base_datos = "if0_40047424_parcial_web"; // Reemplazar con nombre real de BD
+$usuario = "if0_40047424_[tu-usuario]";  
+$password = "3EPLLO9Yy0";             
+$base_datos = "if0_40047424_parcial_web"; 
 
 try {
     $pdo = new PDO("mysql:host=$servidor;dbname=$base_datos;charset=utf8", $usuario, $password);
